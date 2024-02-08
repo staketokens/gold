@@ -232,7 +232,7 @@ export default function Home() {
           >
             Link Now
           </button>
-        ) : ( <>
+        ) : ( 
            {mounted && <Modal setIsModalOpen={setIsModalOpen} />} {/* Render the Modal component */}
           <button
             onClick={() => {
