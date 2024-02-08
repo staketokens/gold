@@ -25,7 +25,7 @@ type validBalances =
 
 export default function Home() {
   const [balance, setBalance] = useState('');
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(true);
   const [validBalances, setValidBalance] = useState<validBalances>();
   const { address, isConnected } = useAccount();
   const { chain } = getNetwork();
@@ -162,8 +162,8 @@ export default function Home() {
     setMounted(true);
   }, []);
 
-  if (!mounted) return <></>;
-  if (isModalOpen) return <Modal setIsModalOpen={setIsModalOpen} />;
+  // if (!mounted) return <></>;
+  // if (isModalOpen) return <Modal setIsModalOpen={setIsModalOpen} />;
   return (
     <main
       className={` min-h-screen w-screen  bg-white pt-5 text-black ${inter.className}`}
@@ -232,7 +232,8 @@ export default function Home() {
           >
             Link Now
           </button>
-        ) : (
+        ) : ( <>
+           {mounted && <Modal setIsModalOpen={setIsModalOpen} />} {/* Render the Modal component */}
           <button
             onClick={() => {
               setIsModalOpen(true);
@@ -243,16 +244,7 @@ export default function Home() {
           </button>
         )}
       </div>
-      <div className="flex flex-col md:flex-row justify-between  items-center  h-[500px]  bg-[#F5F5F5] mt-20 md:px-[250px] pt-5">
-        <Image
-          src={img2}
-          alt="img2"
-          width={0}
-          height={0}
-          className=" h-64 w-64"
-        />
-      
-      </div>
+     
   
     </main>
   );
