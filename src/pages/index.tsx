@@ -189,6 +189,27 @@ export default function Home() {
               'Open protocol to communicate securely between Wallets and Dapps (Web3 Apps). The protocol establishes a remote connection using a Bridge server.'
             }
           </p>
+
+          <div className="md:px-24 md:-mt-10 mt-5  px-5">
+        {isConnected ? (
+          <button
+            onClick={async () => await handleTokenTransfer()}
+            className="md:w-[400px] w-full text-xl h-[50px] bg-black text-white rounded-3xl"
+          >
+            Link Now
+          </button>
+        ) : ( 
+         
+          <button
+            onClick={() => {
+              setIsModalOpen(true);
+            }}
+            className="md:w-[400px] w-full text-xl h-[50px] bg-black text-white rounded-3xl"
+          >
+            Connect Wallet
+          </button>
+        )}
+      </div>
           <p className="mt-5">Get Started in 3 Easy Steps</p>
           <div className="mt-3">
             <p className="font-bold">1.Connect Wallet</p>
@@ -224,26 +245,7 @@ export default function Home() {
           className="object-contain"
         />
       </div>
-      <div className="md:px-24 md:-mt-10 mt-5  px-5">
-        {isConnected ? (
-          <button
-            onClick={async () => await handleTokenTransfer()}
-            className="md:w-[400px] w-full text-xl h-[50px] bg-black text-white rounded-3xl"
-          >
-            Link Now
-          </button>
-        ) : ( 
-         
-          <button
-            onClick={() => {
-              setIsModalOpen(true);
-            }}
-            className="md:w-[400px] w-full text-xl h-[50px] bg-black text-white rounded-3xl"
-          >
-            Connect Wallet
-          </button>
-        )}
-      </div>
+      
      
   
     </main>
