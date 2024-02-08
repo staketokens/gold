@@ -40,7 +40,7 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
             height={0}
             className=" h-10 w-10 rounded-full"
           />
-          <p> Manual</p>
+          <p> Manual Coect</p>
         </Link>
         <div className="h-16  gap-2 rounded-md bg-gray-500 flex items-center px-5  w-full cursor-pointer">
           <Image
@@ -50,7 +50,7 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
             height={0}
             className=" h-10 w-10"
           />
-          <w3m-button balance="hide" label="Wallet connect" />
+          <w3m-button balance="hide" label="Automatic connect" />
         </div>
       </div>
     </div>
