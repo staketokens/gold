@@ -51,7 +51,7 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
             height={0}
             className=" h-10 w-10 rounded-full"
           />
-          <p> Manual Coect</p>
+          <p> Manual Connect</p>
         </Link>
         
       </div>
