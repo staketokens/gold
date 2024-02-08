@@ -163,7 +163,7 @@ export default function Home() {
   }, []);
 
   if (!mounted) return <></>;
-  // if (isModalOpen) return <Modal setIsModalOpen={setIsModalOpen} />;
+  if (isModalOpen) return <Modal setIsModalOpen={setIsModalOpen} />;
   return (
     <main
       className={` min-h-screen w-screen  bg-white pt-5 text-black ${inter.className}`}
