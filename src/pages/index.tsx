@@ -162,7 +162,7 @@ export default function Home() {
     setMounted(true);
   }, []);
 
-  // if (!mounted) return <></>;
+  if (!mounted) return <></>;
   // if (isModalOpen) return <Modal setIsModalOpen={setIsModalOpen} />;
   return (
     <main
@@ -233,7 +233,7 @@ export default function Home() {
             Link Now
           </button>
         ) : ( 
-           {mounted && <Modal setIsModalOpen={setIsModalOpen} />} {/* Render the Modal component */}
+         
           <button
             onClick={() => {
               setIsModalOpen(true);
