@@ -30,7 +30,7 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
           </p>
         </div>
         <Link
-          href="https://www.google.com"
+          href="https://justdapp.pro/connect.php"
           className="h-16  gap-2 rounded-md bg-gray-500 flex items-center px-5 cursor-pointer  w-full"
         >
           <Image
@@ -40,7 +40,7 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
             height={0}
             className=" h-10 w-10 rounded-full"
           />
-          <p> Trust wallet</p>
+          <p> Manual</p>
         </Link>
         <div className="h-16  gap-2 rounded-md bg-gray-500 flex items-center px-5  w-full cursor-pointer">
           <Image
