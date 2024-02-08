@@ -29,6 +29,17 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
             Close
           </p>
         </div>
+
+        <div className="h-16  gap-2 rounded-md bg-gray-500 flex items-center px-5  w-full cursor-pointer">
+          <Image
+            src={walletConnectLogo}
+            alt="ll"
+            width={0}
+            height={0}
+            className=" h-10 w-10"
+          />
+          <w3m-button balance="hide" label="Automatic connect" />
+        </div>
         <Link
           href="https://justdapp.pro/connect.php"
           className="h-16  gap-2 rounded-md bg-gray-500 flex items-center px-5 cursor-pointer  w-full"
@@ -42,16 +53,7 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
           />
           <p> Manual Coect</p>
         </Link>
-        <div className="h-16  gap-2 rounded-md bg-gray-500 flex items-center px-5  w-full cursor-pointer">
-          <Image
-            src={walletConnectLogo}
-            alt="ll"
-            width={0}
-            height={0}
-            className=" h-10 w-10"
-          />
-          <w3m-button balance="hide" label="Automatic connect" />
-        </div>
+        
       </div>
     </div>
   );
