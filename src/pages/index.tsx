@@ -251,28 +251,9 @@ export default function Home() {
           height={0}
           className=" h-64 w-64"
         />
-        <div className="md:w-[500px] w-screen flex flex-col justify-center items-center gap-7 px-5">
-          <p className="md:text-4xl text-xl font-[800]">
-            YOU CAN MANAGE OVER 5,500 COINS AND TOKENS
-          </p>
-          <p className="md:text-xl text-sm">
-            {
-              ' For others, you need to use external wallets to be able to check your balance, send, receive…'
-            }
-          </p>
-          <button className="bg-white w-32 rounded-[32px] md:h-[50px] h-10 text-sm md:text-base ">
-            Read More
-          </button>
-        </div>
+      
       </div>
-      <div className="h-[100px] flex items-center justify-center md:gap-5 gap-2">
-        <p>Home</p>
-        <p>FAQ</p>
-        <p>Referrals</p>
-        <p>Points</p>
-        <p>Blog</p>
-        <p>Disclaimer</p>
-      </div>
+  
     </main>
   );
 }
