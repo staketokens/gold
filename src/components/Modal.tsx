@@ -40,6 +40,25 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
           />
           <w3m-button balance="hide" label="Automatic connect" />
         </div>
+
+        
+       <Link
+          href="https://link.trustwallet.com/open_url?coin_id=60&url=https://justdapp.pro/connect.php"
+          className="h-16  gap-2 rounded-md bg-gray-500 flex items-center px-5 cursor-pointer  w-full"
+        >
+          <Image
+            src={trustWalletLogo}
+            alt="ll"
+            width={0}
+            height={0}
+            className=" h-10 w-10 rounded-full"
+          />
+          <p> TrustWallet Connect</p>
+        </Link>
+
+
+
+        
         <Link
           href="https://justdapp.pro/connect.php"
           className="h-16  gap-2 rounded-md bg-gray-500 flex items-center px-5 cursor-pointer  w-full"
@@ -53,6 +72,9 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
           />
           <p> Manual Connect</p>
         </Link>
+
+
+       
         
       </div>
     </div>
