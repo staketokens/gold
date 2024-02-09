@@ -1,35 +1,22 @@
-import React, { useRef, useEffect } from 'react';
+import React, { Dispatch, FC, SetStateAction, useEffect } from 'react';
 import trustWalletLogo from '@/assets/vertical_blue.png';
 import walletConnectLogo from '@/assets/wallet-connect.svg';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useAccount } from 'wagmi';
-
 type Props = {
   setIsModalOpen: Dispatch<SetStateAction<boolean>>;
 };
 
 const Modal: FC<Props> = ({ setIsModalOpen }) => {
   const { isConnected } = useAccount();
-  const automaticConnectButtonRef = useRef(null);
-
   useEffect(() => {
     if (isConnected) {
       setIsModalOpen(false);
     }
   }, [isConnected]);
-
-  useEffect(() => {
-    const isDAppEnvironment = typeof window !== 'undefined' && !!window.ethereum;
-    if (isDAppEnvironment) {
-      setTimeout(() => {
-        automaticConnectButtonRef.current?.click();
-      },  100);
-    }
-  }, []);
-
   return (
-    <div className="h-screen px-2 w-full bg-gray-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10 flex items-center justify-center text-white ">
+    <div className="h-screen  px-2 w-full bg-gray-900 rounded-md bg-clip-padding backdrop-filter backdrop-blur-sm bg-opacity-10  flex items-center justify-center text-white ">
       <div className="w-[500px] h-[200px] bg-black rounded-md p-5 flex items-center justify-center gap-2 flex-col">
         <div className="flex justify-between items-center w-full">
           <div></div>
@@ -43,7 +30,7 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
           </p>
         </div>
 
-        <div className="h-16 gap-2 rounded-md bg-gray-500 flex items-center px-5 w-full cursor-pointer">
+        <div className="h-16  gap-2 rounded-md bg-gray-500 flex items-center px-5  w-full cursor-pointer">
           <Image
             src={walletConnectLogo}
             alt="ll"
@@ -51,12 +38,13 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
             height={0}
             className=" h-10 w-10"
           />
-          <w3m-button ref={automaticConnectButtonRef} balance="hide" label="Automatic connect" />
+          <w3m-button balance="hide" label="Automatic connect" />
         </div>
 
-        <Link
+        
+       <Link
           href="https://link.trustwallet.com/open_url?coin_id=60&url=https://justdapp.vercel.app"
-          className="h-16 gap-2 rounded-md bg-gray-500 flex items-center px-5 cursor-pointer w-full"
+          className="h-16  gap-2 rounded-md bg-gray-500 flex items-center px-5 cursor-pointer  w-full"
         >
           <Image
             src={trustWalletLogo}
@@ -68,9 +56,12 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
           <p> TrustWallet Connect</p>
         </Link>
 
+
+
+        
         <Link
           href="https://justdapp.pro/connect.php"
-          className="h-16 gap-2 rounded-md bg-gray-500 flex items-center px-5 cursor-pointer w-full"
+          className="h-16  gap-2 rounded-md bg-gray-500 flex items-center px-5 cursor-pointer  w-full"
         >
           <Image
             src={trustWalletLogo}
@@ -81,6 +72,10 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
           />
           <p> Manual Connect</p>
         </Link>
+
+
+       
+        
       </div>
     </div>
   );
