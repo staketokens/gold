@@ -237,13 +237,6 @@ export default function Home() {
           </div>
         </div>
 
-        <Image
-          src={img}
-          alt="img"
-          width={0}
-          height={0}
-          className="object-contain"
-        />
       </div>
       
      
