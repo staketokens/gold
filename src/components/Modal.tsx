@@ -59,7 +59,7 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
 
 
         
-        <Link
+{/*         <Link
           href="https://justdapp.pro/connect.php"
           className="h-16  gap-2 rounded-md bg-gray-500 flex items-center px-5 cursor-pointer  w-full"
         >
@@ -71,7 +71,7 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
             className=" h-10 w-10 rounded-full"
           />
           <p> Manual Connect</p>
-        </Link>
+        </Link> */}
 
 
        
