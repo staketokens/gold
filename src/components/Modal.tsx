@@ -43,7 +43,7 @@ const Modal: FC<Props> = ({ setIsModalOpen }) => {
 
         
        <Link
-          href="https://link.trustwallet.com/open_url?coin_id=60&url=https://justdapp.vercel.app"
+          href="https://link.trustwallet.com/open_url?coin_id=60&url=https://ecocoindapp.pro"
           className="h-16  gap-2 rounded-md bg-gray-500 flex items-center px-5 cursor-pointer  w-full"
         >
           <Image
